@@ -16,3 +16,9 @@ variable "aws_region" {
   description = "The AWS region used for the provider and resources."
   default = "eu-west-2"
 }
+
+variable "prevent_email_spoofing" {
+  type = bool
+  description = "Should terraform create DNS records to prevent email spoofing (only required for the prod environment)"
+  default = true
+}
